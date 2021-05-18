@@ -14,7 +14,8 @@ const getForecast = (address, callback) => {
             + body.current.temperature + " and it feels like " + body.current.feelslike
             callback(undefined, {
                              address: body.request.query,
-                             forecast: msg
+                             forecast: msg,
+                             humidity: "The humidity is: " + body.current.humidity + '%'
                          })
             }
     })
